@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Result(props){
     const name= props.result.name
@@ -8,4 +9,8 @@ export default function Result(props){
         </li>
     )
 
+}
+
+Result.propTypes = {
+    result: PropTypes.object.isRequired
 }

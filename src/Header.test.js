@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // make the App component available
-import Header from './App';
+import Header from './Header';
 import renderer from 'react-test-renderer'
 
 // this is the test case

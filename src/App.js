@@ -2,7 +2,8 @@ import React from 'react';
 import Header from './Header';
 import Search from './Search';
 import Results from './Results';
-import Error from './Error';
+import ApiError from './ApiError';
+import ErrorJS from './ErrorJS';
 
 class App extends React.Component {
   state = {
@@ -43,12 +44,14 @@ class App extends React.Component {
   render(){
     return (
       <div className='App'>
-        <Header />
-        <main>
-          <Search loading={this.state.loading} handleSubmitFormToAPI={this.handleSubmitFormToAPI} searchSelectValue={this.state.searchSelectValue} handleSearchSelectChange={this.handleSearchSelectChange}/>
-          <Results searched={this.state.searched} loading={this.state.loading} results={this.state.results}/>
-          <Error error={this.state.error}/>
-        </main>
+        <ErrorJS>
+          <Header />
+          <main>
+            <Search loading={this.state.loading} handleSubmitFormToAPI={this.handleSubmitFormToAPI} searchSelectValue={this.state.searchSelectValue} handleSearchSelectChange={this.handleSearchSelectChange}/>
+            <Results searched={this.state.searched} loading={this.state.loading} results={this.state.results}/>
+            <ApiError error={this.state.error}/>
+          </main>
+        </ErrorJS>
   
       </div>    
     )

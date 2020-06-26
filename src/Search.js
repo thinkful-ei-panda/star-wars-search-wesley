@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Search (props) {   
     let searchPrompt;
@@ -27,7 +28,6 @@ export default function Search (props) {
         break;
         default:
     }
-
     
     return (
         <div className='search-container'>
@@ -51,11 +51,21 @@ export default function Search (props) {
             <form className='submit-form' onSubmit={e=>props.handleSubmitFormToAPI(e)}>
                 <legend hidden>Star Wars Search Form</legend>
                 <fieldset>
-                    <label htmlFor='query'>{searchPrompt} </label>
-                    <input name='query' id='query'></input>
-                    <button disabled={props.loading} type='submit'>Search</button>
+                    <div className='search-input'>
+                        <label htmlFor='query'>{searchPrompt} </label>
+                        <input name='query' id='query'></input>
+                    </div>
+                    <div className='button-container'>
+                        <button disabled={props.loading} type='submit'>Search</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
     )
+}
+
+Search.propTypes = {
+    handleSearchSelectChange: PropTypes.func.isRequired,
+    handleSubmitFormToAPI: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired
 }

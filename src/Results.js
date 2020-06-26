@@ -1,5 +1,6 @@
 import React from 'react'
 import Result from './Result'
+import PropTypes from 'prop-types'
 
 export default function Results (props) {
     let results;
@@ -19,4 +20,10 @@ export default function Results (props) {
             </ul>
         </div>
     )
+}
+
+Results.propTypes ={
+    results: PropTypes.array.isRequired,
+    searched: PropTypes.bool.isRequired,
+    loading: PropTypes.bool.isRequired
 }

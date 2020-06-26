@@ -5,7 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // make the App component available
-import Search from './App';
+import Search from './Search';
 import renderer from 'react-test-renderer'
 
 // this is the test case
