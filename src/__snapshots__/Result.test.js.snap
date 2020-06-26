@@ -59,6 +59,7 @@ exports[`renders the UI as expected 1`] = `
         </select>
       </div>
       <form
+        className="submit-form"
         onSubmit={[Function]}
       >
         <legend
@@ -70,7 +71,7 @@ exports[`renders the UI as expected 1`] = `
           <label
             htmlFor="query"
           >
-            Persons name?  
+            Person's name?  
              
           </label>
           <input
@@ -86,13 +87,18 @@ exports[`renders the UI as expected 1`] = `
         </fieldset>
       </form>
     </div>
-    <div>
+    <div
+      className="results-container"
+    >
       <div
         hidden={true}
       >
         Searching...
       </div>
-      <ul />
+      <ul
+        className="search-results"
+        hidden={false}
+      />
     </div>
     <div />
   </main>

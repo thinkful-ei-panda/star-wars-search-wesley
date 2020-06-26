@@ -4,7 +4,7 @@ export default function Search (props) {
     let searchPrompt;
     switch (props.searchSelectValue){
         case 'people' :
-            searchPrompt='Person\s name?  '
+            searchPrompt='Person\'s name?  '
             break;
         case 'films' :
             searchPrompt='Title of film?  '
@@ -48,7 +48,7 @@ export default function Search (props) {
 
             {/* Searching People */}
 
-            <form onSubmit={e=>props.handleSubmitFormToAPI(e)}>
+            <form className='submit-form' onSubmit={e=>props.handleSubmitFormToAPI(e)}>
                 <legend hidden>Star Wars Search Form</legend>
                 <fieldset>
                     <label htmlFor='query'>{searchPrompt} </label>

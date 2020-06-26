@@ -10,11 +10,11 @@ export default function Results (props) {
     }
 
     return (
-        <div>
+        <div className='results-container'>
             <div hidden={!props.loading}>
                 Searching...
             </div>
-            <ul>
+            <ul hidden={props.loading} className='search-results'>
                 {results}
             </ul>
         </div>
