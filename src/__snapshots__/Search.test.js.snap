@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<div
+  className="App"
+>
+  <header>
+    <h1>
+      Star Wars Searcher!!
+    </h1>
+  </header>
+  <main>
+    <div
+      className="search-container"
+    >
+      <div
+        className="search-select-container"
+      >
+        <label
+          htmlFor="searchingFor"
+        >
+          What are you searching for?
+        </label>
+        <select
+          id="searchingFor"
+          name="searchingFor"
+          onChange={[Function]}
+        >
+          <option
+            value="people"
+          >
+            Person
+          </option>
+          <option
+            value="films"
+          >
+            Film
+          </option>
+          <option
+            value="starships"
+          >
+            Starship
+          </option>
+          <option
+            value="vehicles"
+          >
+            Vehicle
+          </option>
+          <option
+            value="species"
+          >
+            Species
+          </option>
+          <option
+            value="planets"
+          >
+            Planet
+          </option>
+        </select>
+      </div>
+      <form
+        onSubmit={[Function]}
+      >
+        <legend
+          hidden={true}
+        >
+          Star Wars Search Form
+        </legend>
+        <fieldset>
+          <label
+            htmlFor="query"
+          >
+            Persons name?  
+             
+          </label>
+          <input
+            id="query"
+            name="query"
+          />
+          <button
+            disabled={false}
+            type="submit"
+          >
+            Search
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <div>
+      <div
+        hidden={true}
+      >
+        Searching...
+      </div>
+      <ul />
+    </div>
+    <div />
+  </main>
+</div>
+`;

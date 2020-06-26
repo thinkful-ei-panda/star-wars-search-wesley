@@ -5,8 +5,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // make the App component available
-import App from './App';
-import renderer from 'react-test-renderer';
+import Header from './App';
+import renderer from 'react-test-renderer'
 
 // this is the test case
 it('renders without crashing', () => {
@@ -14,15 +14,15 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
 
   // render the component, this is the actual test, if something is wrong it will fail here
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Header />, div);
 
   // clean up code
   ReactDOM.unmountComponentAtNode(div);
 });
 
 it('renders the UI as expected', () => {
-  const tree = renderer
-    .create(<App name="Messages" unread={4}/>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();  
+    const tree = renderer
+      .create(<Header name="Messages" unread={4}/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot();  
 });
